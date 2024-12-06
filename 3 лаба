@@ -1,0 +1,17 @@
+import math
+
+x1 = 4
+xn = 8
+dx = 0.2
+a = 5.3
+
+steps = int((xn - x1) / dx) + 1
+
+x = x1
+
+for i in range(steps):
+    while x <= xn:
+        Y = math.sqrt(math.log(a**2) / (x + a)) + math.cos(a)**2
+        print(f"x = {x:.2f}, Y = {Y:.6f}")
+        x += dx
+        break 
